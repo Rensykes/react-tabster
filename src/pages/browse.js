@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
+import BrowseContainer from '../containers/browse';
+import HeaderContainer from '../containers/header';
+
 
 export default function Browse() {
+    const [page, setPage] = useState('browse');
     return (
-        <div>
-            
-        </div>
+        <>
+            <HeaderContainer page={page} setPage={setPage} />
+            <BrowseContainer />
+        </>
     )
 }
